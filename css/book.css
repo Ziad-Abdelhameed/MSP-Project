@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  /* padding: 0;
+  margin: 0; */
+}
+body {
+  /* background-color: #aeb6bf; */
+}
+html {
+  scroll-behavior: smooth;
+}
+.page {
+  display: grid;
+  /* border: 1px solid red; */
+  grid-template-rows: auto auto auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-areas: "nav" "best-sellers" "new-arrivals" "footer";
+  gap: 15px 0px;
+}
+.new-arrivals {
+  grid-area: new-arrivals;
+  display: grid;
+  background-color: #d7dbdd;
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 100%;
+  grid-template-rows: auto auto;
+  grid-template-areas: "h2" "books";
+  padding-bottom: 20px;
+}
+.best-sellers {
+  grid-area: best-sellers;
+  display: grid;
+  background-color: #d7dbdd;
+  /* border: 1px solid red; */
+  width: 100%;
+  height: auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: "h2" "books";
+  padding-bottom: 20px;
+}
+
+.best-sellers h2,
+.new-arrivals h2 {
+  grid-area: h2;
+  height: auto;
+  position: relative;
+  left: 22px;
+  color: #566573;
+  border-bottom: 1px solid #566573;
+  width: 37%;
+  /* color: #25317e; */
+}
+.books {
+  grid-area: books;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 10px 0;
+  justify-items: center;
+}
+.book1 {
+  /* grid-area: book1; */
+  width: 200px;
+  height: auto;
+  border: 1px solid #ccd1d1;
+  background-color: #f0f3f4;
+  text-align: center;
+}
+.book1 img {
+  width: 100%;
+}
+.page,
+.best-sellers p,
+.page h2,
+a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+a {
+  color: #717d7e;
+  /* opacity: 0.7; */
+}
+.deleted {
+  opacity: 0.7;
+  position: relative;
+  left: 12px;
+}
+.book1 .image {
+  position: relative;
+  cursor: pointer;
+}
+.book1 .sale,
+.new {
+  position: absolute;
+  left: 0;
+  width: 49px;
+}
+.book1 .sale {
+  background-color: #f7dc6f;
+  top: 65px;
+  color: black;
+  font-style: italic;
+}
+.book1 .new {
+  background-color: #27ae60;
+  top: 88px;
+  color: white;
+  font-style: italic;
+}
+.book1 .describe {
+  overflow: hidden;
+}
+.book1:hover {
+  box-shadow: 6px 10px #888888;
+  transition-duration: 1.25s;
+}
+.book1 a {
+  text-decoration: none;
+  /* touch-action: manipulation; */
+  /* -webkit-tap-highlight-color: transparent; */
+}
+.checked {
+  color: #f5b041;
+}
+#book3 .image,
+#book4 .image {
+  height: 305px;
+}
+
+#book4 .image img,
+#book3 .image img {
+  height: 100%;
+}
+#book4,
+#book3 {
+  position: relative;
+}
+#book4 .rate,
+#book3 .rate {
+  position: absolute;
+  bottom: 0;
+  right: 53px;
+}
+.footer {
+  grid-area: footer;
+  background-color: red;
+}
+.nav {
+  grid-area: nav;
+  background-color: red;
+}
