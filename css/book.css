@@ -107,9 +107,6 @@ a {
   color: white;
   font-style: italic;
 }
-.book1 .describe {
-  overflow: hidden;
-}
 .book1:hover {
   box-shadow: 6px 10px #888888;
   transition-duration: 1.25s;
@@ -148,4 +145,18 @@ a {
 .nav {
   grid-area: nav;
   background-color: red;
+}
+#book1,
+#book2,
+#book4,
+#book3 {
+  position: relative;
+}
+#book1 .rate,
+#book2 .rate,
+#book4 .rate,
+#book3 .rate {
+  position: absolute;
+  bottom: 0;
+  right: 53px;
 }
